@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+h1, h2 {
+    color: #f8fafc;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    border-bottom: 3px solid #3b82f6;
+    padding-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    color: #94a3b8;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.problem-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.problem-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    border-color: #3b82f6;
+}
+
+.problem-card h2 {
+    color: #ffa116;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.problem-card p {
+    margin-bottom: 8px;
+    color: #cbd5e1;
+    font-size: 1rem;
+}
+
+.problem-card strong {
+    color: #38bdf8;
+}
+
+
+.problem-card a {
+    margin-top: auto;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffa116;
+    border: 2px solid #ffa116;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.problem-card a:hover {
+    background-color: #ffa116;
+    color: #0f172a;
+}
+
+
+.problem-card button {
+    margin-top: 10px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.problem-card button:nth-of-type(1) {
+    background-color: #22c55e; /* Green for Solved */
+    color: white;
+}
+
+.problem-card button:nth-of-type(1):hover {
+    background-color: #16a34a;
+}
+
+.problem-card button:nth-of-type(2) {
+    background-color: #475569; /* Slate for Save */
+    color: white;
+}
+
+.problem-card button:nth-of-type(2):hover {
+    background-color: #334155;
+}

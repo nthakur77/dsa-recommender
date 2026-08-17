@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DSA Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dashboard-wrapper { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .panel { background: #1e293b; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #334155; }
+        .history-list { list-style: none; padding: 0; }
+        .history-list li { border-bottom: 1px solid #334155; padding: 10px 0; display: flex; justify-content: space-between;}
+        .form-group { display: flex; flex-direction: column; margin-bottom: 10px; }
+        .form-group input { padding: 8px; border-radius: 4px; border: 1px solid #475569; background: #0f172a; color: white;}
+        .stat-box { background: #0f172a; padding: 15px; border-radius: 8px; text-align: center; border: 1px solid #3b82f6;}
+    </style>
+</head>
+<body>
+    <h1>Welcome, Nishchal</h1>
+    
+    <div class="dashboard-wrapper">
+        <div class="left-col">
+            <div class="panel">
+                <h2>🎯 Next Challenges (Progressive Rating)</h2>
+                <div id="recommendations-container" class="dashboard">
+                    <p>Loading recommendations...</p>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>➕ Add a New LeetCode Problem to Database</h2>
+                <form id="add-problem-form">
+                    <div class="form-group"><label>Title:</label><input type="text" id="newTitle" required></div>
+                    <div class="form-group"><label>Topic (e.g., Arrays, DP):</label><input type="text" id="newTopic" required></div>
+                    <div class="form-group"><label>Difficulty Rating (Number):</label><input type="number" id="newDiff" required></div>
+                    <div class="form-group"><label>LeetCode URL:</label><input type="url" id="newUrl" required></div>
+                    <button type="submit" style="background: #3b82f6; width: 100%; margin-top: 10px;">Add to Problem Bank</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="right-col">
+            <div class="panel stat-box">
+                <h3 style="color: #94a3b8; margin-bottom: 5px;">Total Solved</h3>
+                <h2 id="total-solved-count" style="color: #22c55e; font-size: 2.5rem; margin: 0;">0</h2>
+            </div>
+
+            <div class="panel">
+                <h2>📜 Recent History</h2>
+                <ul id="history-container" class="history-list">
+                    <p>Loading history...</p>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
