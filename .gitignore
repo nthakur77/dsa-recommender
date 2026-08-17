@@ -35,6 +35,8 @@
 *.lib
 
 # Executables
+recommender_engine
+recommender_server
 *.exe
 *.out
 *.app
